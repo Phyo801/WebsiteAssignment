@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Final Results</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="leaderboard-page">
+
+<div class="results-container">
+
+    <!-- TITLE -->
+    <h1 class="results-title">Leaderboard</h1>
+
+    <!-- 🔥 TABS -->
+    <div class="leaderboard-tabs">
+        <button onclick="showLeaderboard('quiz')">🧠 Quiz</button>
+        <button onclick="showLeaderboard('snake')">🐍 Snake</button>
+    </div>
+
+    <!-- 🏆 PODIUM -->
+    <div class="podium" id="podium"></div>
+
+    <!-- 📊 TABLE -->
+    <div class="table-container">
+        <table class="leaderboard-table">
+            <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Player</th>
+                <th>Score</th>
+            </tr>
+            </thead>
+            <tbody id="leaderboardTable"></tbody>
+        </table>
+    </div>
+
+    <!-- 🔘 BUTTONS -->
+    <div class="buttons">
+        <button onclick="clearLeaderboard()" class="clear-btn">
+            🔄 Clear Leaderboard
+        </button>
+
+        <button onclick="goHome()" class="home-btn">
+            ⬅ Back to Home
+        </button>
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

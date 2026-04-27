@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Category</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        <img src="images/logoQzone.png">
+        <span>QZone</span>
+    </div>
+</nav>
+
+<div class="selection-container">
+
+    <h1 class="title">Choose Quiz Category</h1>
+
+    <div class="game-cards">
+
+        <div class="card" onclick="startCategory('general')">
+            <img src="images/general.png">
+            <div class="overlay"></div>
+            <div class="card-text">
+                <h2>🧠 General</h2>
+                <p>Mixed knowledge</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="startCategory('sports')">
+            <img src="images/sports.png">
+            <div class="overlay"></div>
+            <div class="card-text">
+                <h2>⚽ Sports</h2>
+                <p>Sports trivia</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="startCategory('movies')">
+            <img src="images/movies.png">
+            <div class="overlay"></div>
+            <div class="card-text">
+                <h2>🎬 Movies</h2>
+                <p>Film knowledge</p>
+            </div>
+        </div>
+
+    </div>
+
+    <button onclick="goHome()" class="back-btn">⬅ Back</button>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

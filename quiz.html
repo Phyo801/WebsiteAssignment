@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+    <img src="images/logoQzone.png" alt="Quiz Logo">
+    <span>QZone</span>
+    </div>
+</nav>
+
+<div class="quiz-box">
+
+    <div id="questionCount"></div>
+
+    <div class="progress">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <h2 id="question"></h2>
+
+    <button class="option" onclick="checkAnswer(0)" id="opt0"></button>
+    <button class="option" onclick="checkAnswer(1)" id="opt1"></button>
+    <button class="option" onclick="checkAnswer(2)" id="opt2"></button>
+
+    <br><br>
+    <button onclick="goHome()">Back</button>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

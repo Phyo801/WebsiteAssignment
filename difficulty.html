@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Difficulty</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="difficulty-page">
+
+<nav class="navbar">
+    <div class="logo">
+    <img src="images/logoQzone.png" alt="Quiz Logo">
+    <span>QZone</span>
+    </div>
+</nav>
+
+<div class="quiz-box difficulty-box">
+
+    <h3 id="welcome" class="welcome-text"></h3>
+
+    <h2 class="difficulty-title">Select Difficulty</h2>
+
+    <div class="difficulty-buttons">
+    <button class="diff-btn easy" onclick="selectDifficulty('easy')">
+        Beginner
+        <span class="level-desc">For new players</span>
+    </button>
+
+    <button class="diff-btn medium" onclick="selectDifficulty('medium')">
+        Standard
+        <span class="level-desc">Balanced challenge</span>
+    </button>
+
+    <button class="diff-btn hard" onclick="selectDifficulty('hard')">
+        Expert
+        <span class="level-desc">Only for pros</span>
+    </button>
+    </div>
+
+    <button onclick="goHome()" class="back-btn">Back</button>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
