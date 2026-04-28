@@ -512,16 +512,69 @@ function showLeaderboard(type = "quiz") {
         return;
     }
 
+    // Sort by score
     filtered.sort((a, b) => b.score - a.score);
 
+    // ================= PODIUM =================
+    if (podium) {
+
+        const order = [1, 0, 2]; // second, first, third
+
+        order.forEach((pos) => {
+
+            if (!filtered[pos]) return;
+
+            let player = filtered[pos];
+
+            let card = document.createElement("div");
+            card.className = "podium-card";
+
+            if (pos === 0) card.classList.add("first");
+            if (pos === 1) card.classList.add("second");
+            if (pos === 2) card.classList.add("third");
+
+            let crownClass = "crown-1";
+            let crown = "👑";
+
+            if (pos === 1) {
+                crown = "👑";
+                crownClass = "crown-2";
+            }
+            if (pos === 2) {
+                crown = "👑";
+                crownClass = "crown-3";
+            }
+
+            card.innerHTML = `
+                <div class="crown ${crownClass}">${crown}</div>
+                <div class="player-name">${player.name}</div>
+                <div class="score">${player.score}</div>
+                <div class="rank">${pos + 1}</div>
+            `;
+
+            podium.appendChild(card);
+        });
+    }
+
+    // ================= TABLE =================
     filtered.forEach((player, index) => {
+
         let row = document.createElement("tr");
+
+        let medal = "";
+        if (index === 0) medal = "🥇";
+        else if (index === 1) medal = "🥈";
+        else if (index === 2) medal = "🥉";
 
         row.innerHTML = `
             <td>${index + 1}</td>
-            <td>${player.name}</td>
+            <td>${medal} ${player.name}</td>
             <td>${player.score}</td>
         `;
+
+        if (index === 0) row.classList.add("gold");
+        if (index === 1) row.classList.add("silver");
+        if (index === 2) row.classList.add("bronze");
 
         table.appendChild(row);
     });

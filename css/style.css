@@ -421,6 +421,107 @@ button:hover {
     transition: 0.4s;
 }
 
+/* ===== IMPROVED PODIUM ===== */
+
+.podium {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 50px;
+    margin: 60px 0;
+}
+
+/* Card base */
+.podium-card {
+    width: 150px;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    transition: 0.4s ease;
+}
+
+/* First */
+.podium-card.first {
+    height: 230px;
+    background: gold;
+    color: black;
+    box-shadow: 0 0 40px gold;
+}
+
+/* Second */
+.podium-card.second {
+    height: 180px;
+    background: #5aa0d6;
+    box-shadow: 0 0 25px #5aa0d6;
+}
+
+/* Third */
+.podium-card.third {
+    height: 160px;
+    background: #c86dd7;
+    box-shadow: 0 0 25px #c86dd7;
+}
+
+/* Crown animation */
+.crown {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: crownFloat 2.5s ease-in-out infinite alternate;
+}
+
+/* Glow styles */
+.crown-1 {
+    font-size: 40px;
+    filter: drop-shadow(0 0 15px gold);
+}
+
+.crown-2 {
+    font-size: 32px;
+    filter: brightness(1.5) drop-shadow(0 0 10px #ddd);
+}
+
+.crown-3 {
+    font-size: 30px;
+    filter: sepia(1) saturate(5) drop-shadow(0 0 8px #cd7f32);
+}
+
+/* Floating animation */
+@keyframes crownFloat {
+    from { transform: translate(-50%, 0); }
+    to { transform: translate(-50%, -10px); }
+}
+
+/* Name */
+.player-name {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Score */
+.podium-card .score {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+/* Rank big number */
+.rank {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 40px;
+    opacity: 0.2;
+}
+
+/* Hover effect */
+.podium-card:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+
 .first { height: 220px; background: gold; color: black; }
 .second { height: 180px; background: #4aa3df; }
 .third { height: 160px; background: #c86dd7; }
@@ -614,7 +715,7 @@ button:hover {
 html, body {
     height: 100%;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;   /* only block horizontal scroll */
     font-family: Arial, sans-serif;
     color: white;
 }
