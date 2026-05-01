@@ -1,4 +1,3 @@
-// ================= QUESTIONS =================
 const questions = {
     sports: {
             easy: [
@@ -334,15 +333,11 @@ const questions = {
                 }
     };
 
-// ================= GLOBAL =================
 let currentQuestion = 0;
 let score = 0;
 let quizSet = [];
 let currentTab = "quiz";
 
-
-
-// ================= QUIZ LOAD =================
 if (window.location.pathname.includes("quiz.html")) {
 
     let selectedCategory = localStorage.getItem("category");
@@ -362,9 +357,6 @@ if (window.location.pathname.includes("quiz.html")) {
     }
 }
 
-
-
-// ================= NAVIGATION =================
 function goToSelection() {
     const username = document.getElementById("username")?.value.trim();
 
@@ -405,9 +397,6 @@ function goHome() {
     window.location.href = "index.html";
 }
 
-
-
-// ================= QUIZ =================
 function loadQuestion() {
 
     if (currentQuestion >= quizSet.length) {
@@ -447,9 +436,6 @@ function updateQuestionCount() {
     if (el) el.innerText = (currentQuestion + 1) + " / " + quizSet.length;
 }
 
-
-
-// ================= FINISH QUIZ =================
 function finishQuiz() {
 
     let name = localStorage.getItem("username") || "Player";
@@ -486,9 +472,6 @@ function finishQuiz() {
     window.location.href = "leaderboard.html";
 }
 
-
-
-// ================= LEADERBOARD =================
 function showLeaderboard(type = "quiz") {
 
     currentTab = type;
@@ -515,7 +498,6 @@ function showLeaderboard(type = "quiz") {
     // Sort by score
     filtered.sort((a, b) => b.score - a.score);
 
-    // ================= PODIUM =================
     if (podium) {
 
         const order = [1, 0, 2]; // second, first, third
@@ -556,7 +538,6 @@ function showLeaderboard(type = "quiz") {
         });
     }
 
-    // ================= TABLE =================
     filtered.forEach((player, index) => {
 
         let row = document.createElement("tr");
@@ -591,9 +572,6 @@ if (window.location.pathname.includes("leaderboard.html")) {
     showLeaderboard("quiz");
 }
 
-
-
-// ================= SNAKE GAME =================
 document.addEventListener("DOMContentLoaded", function () {
 
     const canvas = document.getElementById("game");
@@ -616,8 +594,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let highScore = localStorage.getItem("snakeHighScore") || 0;
     highScoreEl.innerText = highScore;
 
-
-    // ===== 🔊 SOUND SYSTEM =====
     const eatSound = new Audio("sounds/Eat_sound.mp3");
     const gameOverSound = new Audio("sounds/Game_Over.mp3");
     const moveSound = new Audio("sounds/Move_sound.mp3");

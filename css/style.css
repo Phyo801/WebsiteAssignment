@@ -110,24 +110,21 @@ input:focus {
     border: 2px solid #7b3fe4;
 }
 
-/* Center everything */
 .selection-container {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;   /* vertical center */
-    align-items: center;       /* horizontal center */
+    justify-content: center;
+    align-items: center;
     text-align: center;
     color: white;
 }
 
-/* Title */
 .title {
     font-size: 3rem;
     margin-bottom: 40px;
 }
 
-/* Card container */
 .game-cards {
   display: flex;
   justify-content: center;
@@ -135,7 +132,6 @@ input:focus {
   flex-wrap: wrap;
 }
 
-/* Card style */
 .card {
   position: relative;
   width: 260px;
@@ -146,14 +142,12 @@ input:focus {
   transition: 0.3s;
 }
 
-/* Image */
 .card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Overlay */
 .overlay {
   position: absolute;
   bottom: 0;
@@ -163,27 +157,23 @@ input:focus {
   color: white;
 }
 
-/* Hover effect */
 .card:hover {
   transform: scale(1.08);
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
 
-/* Icon */
 .card .icon {
     font-size: 50px;
     margin-bottom: 10px;
 }
 
-/* Hover effect */
 .card:hover {
     transform: translateY(-10px) scale(1.05);
     background: linear-gradient(135deg, #6c63ff, #9f7aea);
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
-/* Text */
 .card h2 {
     margin: 10px 0 5px;
 }
@@ -421,7 +411,6 @@ button:hover {
     transition: 0.4s;
 }
 
-/* ===== IMPROVED PODIUM ===== */
 
 .podium {
     display: flex;
@@ -431,7 +420,6 @@ button:hover {
     margin: 60px 0;
 }
 
-/* Card base */
 .podium-card {
     width: 150px;
     border-radius: 20px;
@@ -442,7 +430,6 @@ button:hover {
     transition: 0.4s ease;
 }
 
-/* First */
 .podium-card.first {
     height: 230px;
     background: gold;
@@ -450,21 +437,20 @@ button:hover {
     box-shadow: 0 0 40px gold;
 }
 
-/* Second */
+
 .podium-card.second {
     height: 180px;
     background: #5aa0d6;
     box-shadow: 0 0 25px #5aa0d6;
 }
 
-/* Third */
 .podium-card.third {
     height: 160px;
     background: #c86dd7;
     box-shadow: 0 0 25px #c86dd7;
 }
 
-/* Crown animation */
+
 .crown {
     position: absolute;
     top: -35px;
@@ -473,7 +459,7 @@ button:hover {
     animation: crownFloat 2.5s ease-in-out infinite alternate;
 }
 
-/* Glow styles */
+
 .crown-1 {
     font-size: 40px;
     filter: drop-shadow(0 0 15px gold);
@@ -489,25 +475,21 @@ button:hover {
     filter: sepia(1) saturate(5) drop-shadow(0 0 8px #cd7f32);
 }
 
-/* Floating animation */
 @keyframes crownFloat {
     from { transform: translate(-50%, 0); }
     to { transform: translate(-50%, -10px); }
 }
 
-/* Name */
 .player-name {
     margin-top: 10px;
     font-size: 18px;
 }
 
-/* Score */
 .podium-card .score {
     font-size: 20px;
     margin-top: 5px;
 }
 
-/* Rank big number */
 .rank {
     position: absolute;
     bottom: 10px;
@@ -516,7 +498,6 @@ button:hover {
     opacity: 0.2;
 }
 
-/* Hover effect */
 .podium-card:hover {
     transform: translateY(-10px) scale(1.05);
 }
@@ -711,35 +692,29 @@ button:hover {
     to { transform: translateY(-10px); }
 }
 
-/* ===== RESET & NO SCROLL ===== */
 html, body {
     height: 100%;
     margin: 0;
-    overflow-x: hidden;   /* only block horizontal scroll */
+    overflow-x: hidden;  
     font-family: Arial, sans-serif;
     color: white;
 }
 
-
-/* ===== GAME AREA (moves everything up together) ===== */
 .game-area {
-    margin-top: -10px; /* adjust if needed */
+    margin-top: -10px;
     text-align: center;
 }
 
 .game-header {
-    margin-top: -66px;   /* move up */
+    margin-top: -66px;  
 }
 
 
-/* ===== SCORE TEXT ===== */
 .score {
     margin-top: 10px;
     font-size: 18px;
 }
 
-
-/* ===== CANVAS ===== */
 canvas {
     background: black;
     margin-top: 15px;
@@ -749,8 +724,6 @@ canvas {
     box-shadow: 0 0 25px #00f7ff;
 }
 
-
-/* ===== BUTTONS UNDER CANVAS ===== */
 .game-buttons {
     display: flex;
     justify-content: center;
@@ -775,8 +748,6 @@ canvas {
     box-shadow: 0 0 15px #5f7cff;
 }
 
-
-/* ===== GAME OVER OVERLAY ===== */
 #gameOverScreen {
     position: fixed;
     top: 0;
@@ -792,8 +763,6 @@ canvas {
     z-index: 999;
 }
 
-
-/* ===== GAME OVER BOX ===== */
 .gameover-box {
     position: relative;
     width: 800px;
@@ -801,8 +770,6 @@ canvas {
     text-align: center;
 }
 
-
-/* ===== GAME OVER IMAGE ===== */
 .gameover-box img {
     width: 100%;
     display: block;
@@ -810,8 +777,6 @@ canvas {
     box-shadow: 0 0 30px #00f7ff;
 }
 
-
-/* Button container */
 .gameover-buttons {
     position: absolute;
     bottom: 25px;
@@ -821,7 +786,6 @@ canvas {
     gap: 15px;
 }
 
-/* Play Again */
 .play-again {
     padding: 12px 25px;
     border-radius: 25px;
@@ -833,7 +797,6 @@ canvas {
     transition: 0.2s;
 }
 
-/* Back button */
 .back-home {
     padding: 12px 25px;
     border-radius: 25px;
@@ -845,13 +808,11 @@ canvas {
     transition: 0.2s;
 }
 
-/* Hover fix (no movement jump) */
 .play-again:hover,
 .back-home:hover {
     transform: scale(1.05);
 }
 
-/* Card image */
 .card {
     position: relative;
     width: 250px;
@@ -868,14 +829,12 @@ canvas {
     object-fit: cover;
 }
 
-/* Overlay */
 .overlay {
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.5);
 }
 
-/* Text */
 .card-text {
     position: absolute;
     top: 50%;
@@ -885,7 +844,6 @@ canvas {
     text-align: center;
 }
 
-/* Hover effect */
 .card:hover {
     transform: scale(1.08);
     box-shadow: 0 0 20px #00f7ff;
